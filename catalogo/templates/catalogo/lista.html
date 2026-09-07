@@ -1,0 +1,40 @@
+{% extends 'catalogo/base.html' %}
+
+{% block titulo %}Catálogo de productos{% endblock %}
+
+{% block contenido %}
+    <h2>Nuestros productos</h2>
+
+    <section class="resumen">
+        <p><strong>Total de productos:</strong> {{ resumen.total }}</p>
+        <p><strong>Disponibles:</strong> {{ resumen.disponibles }}</p>
+        <p><strong>Sin stock:</strong> {{ resumen.sin_stock }}</p>
+    </section>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+            <tr class="{% if producto.stock == 0 %}sin-stock{% endif %}">
+                <td><a href="{% url 'detalle' producto.id %}">{{ producto.nombre }}</a></td>
+                <td>{{ producto.categoria }}</td>
+                <td>${{ producto.precio }}</td>
+                <td>
+                    {% if producto.stock == 0 %}
+                        <span class="etiqueta-sin-stock">Sin stock</span>
+                    {% else %}
+                        {{ producto.stock }}
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
