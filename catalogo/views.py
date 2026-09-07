@@ -15,7 +15,20 @@ def cargar_productos():
 
 def lista(request):
     productos = cargar_productos()
-    contexto = {'productos': productos}
+
+    total_productos = len(productos)
+    disponibles = sum(1 for p in productos if p['stock'] > 0)
+
+    resumen = {
+        'total': total_productos,
+        'disponibles': disponibles,
+        'sin_stock': total_productos - disponibles,
+    }
+
+    contexto = {
+        'productos': productos,
+        'resumen': resumen,
+    }
     return render(request, 'catalogo/lista.html', contexto)
 
 
