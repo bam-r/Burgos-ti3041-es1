@@ -11,30 +11,70 @@
         <p><strong>Sin stock:</strong> {{ resumen.sin_stock }}</p>
     </section>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Categoría</th>
-                <th>Precio</th>
-                <th>Stock</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for producto in productos %}
-            <tr class="{% if producto.stock == 0 %}sin-stock{% endif %}">
-                <td><a href="{% url 'detalle' producto.id %}">{{ producto.nombre }}</a></td>
-                <td>{{ producto.categoria }}</td>
-                <td>${{ producto.precio }}</td>
-                <td>
-                    {% if producto.stock == 0 %}
-                        <span class="etiqueta-sin-stock">Sin stock</span>
-                    {% else %}
-                        {{ producto.stock }}
-                    {% endif %}
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="catalogo-layout">
+        <div class="catalogo-principal">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for producto in productos %}
+                    <tr class="{% if producto.stock == 0 %}sin-stock{% endif %}">
+                        <td>
+                            <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}"
+                                 class="miniatura"
+                                 onerror="this.src='/static/catalogo/img/sin-imagen.jpg'">
+                        </td>
+                        <td><a href="{% url 'detalle' producto.id %}">{{ producto.nombre }}</a></td>
+                        <td>{{ producto.categoria }}</td>
+                        <td>${{ producto.precio }}</td>
+                        <td>
+                            {% if producto.stock == 0 %}
+                                <span class="etiqueta-sin-stock">Sin stock</span>
+                            {% else %}
+                                {{ producto.stock }}
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if producto.stock > 0 %}
+                                <form method="post" action="{% url 'comprar' producto.id %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn-comprar">Comprar</button>
+                                </form>
+                            {% else %}
+                                <button class="btn-comprar" disabled>Agotado</button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <aside class="carrito">
+            <h3>🛒 Carrito</h3>
+            {% if carrito %}
+                <ul class="carrito-lista">
+                    {% for item in carrito %}
+                        <li>
+                            <img src="{{ item.producto.imagen }}" alt="{{ item.producto.nombre }}" class="carrito-mini">
+                            <div>
+                                <p class="carrito-nombre">{{ item.producto.nombre }}</p>
+                                <p class="carrito-cantidad">Cantidad: {{ item.cantidad }}</p>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Aún no has agregado productos.</p>
+            {% endif %}
+        </aside>
+    </div>
 {% endblock %}
