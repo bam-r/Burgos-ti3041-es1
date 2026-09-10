@@ -5,23 +5,26 @@
     "categoria": "Herramientas manuales",
     "precio": 5990,
     "stock": 0,
-    "imagen": "/static/catalogo/img/martillocar.jpg"
+    "imagen": "/static/catalogo/img/martillocar.jpg",
+    "activo": true
   },
   {
     "id": 2,
     "nombre": "Destornillador plano 6 mm",
     "categoria": "Herramientas manuales",
     "precio": 2490,
-    "stock": 40,
-    "imagen": "/static/catalogo/img/destor6mm.jpg"
+    "stock": 39,
+    "imagen": "/static/catalogo/img/destor6mm.jpg",
+    "activo": false
   },
   {
     "id": 3,
     "nombre": "Destornillador phillips 6 mm",
     "categoria": "Herramientas manuales",
     "precio": 2490,
-    "stock": 38,
-    "imagen": "/static/catalogo/img/destorphi.jpg"
+    "stock": 36,
+    "imagen": "/static/catalogo/img/destorphi.jpg",
+    "activo": true
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "categoria": "Herramientas manuales",
     "precio": 4990,
     "stock": 20,
-    "imagen": "/static/catalogo/img/alicateuni.jpg"
+    "imagen": "/static/catalogo/img/alicateuni.jpg",
+    "activo": true
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "categoria": "Herramientas manuales",
     "precio": 6990,
     "stock": 15,
-    "imagen": "/static/catalogo/img/sierrametal.jpg"
+    "imagen": "/static/catalogo/img/sierrametal.jpg",
+    "activo": true
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "categoria": "Herramientas manuales",
     "precio": 7990,
     "stock": 12,
-    "imagen": "/static/catalogo/img/llaveing.jpg"
+    "imagen": "/static/catalogo/img/llaveing.jpg",
+    "activo": true
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "categoria": "Herramientas eléctricas",
     "precio": 39990,
     "stock": 8,
-    "imagen": "/static/catalogo/img/taladroper.jpg"
+    "imagen": "/static/catalogo/img/taladroper.jpg",
+    "activo": true
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "categoria": "Herramientas eléctricas",
     "precio": 34990,
     "stock": 6,
-    "imagen": "/static/catalogo/img/esmeril.jpg"
+    "imagen": "/static/catalogo/img/esmeril.jpg",
+    "activo": true
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "categoria": "Herramientas eléctricas",
     "precio": 59990,
     "stock": 0,
-    "imagen": "/static/catalogo/img/sierracirc.jpg"
+    "imagen": "/static/catalogo/img/sierracirc.jpg",
+    "activo": true
   },
   {
     "id": 10,
@@ -77,7 +86,8 @@
     "categoria": "Herramientas eléctricas",
     "precio": 32990,
     "stock": 5,
-    "imagen": "/static/catalogo/img/lijadoraor.jpg"
+    "imagen": "/static/catalogo/img/lijadoraor.jpg",
+    "activo": true
   },
   {
     "id": 11,
@@ -85,7 +95,8 @@
     "categoria": "Tornillería",
     "precio": 3490,
     "stock": 60,
-    "imagen": "/static/catalogo/img/tornillosauto.jpg"
+    "imagen": "/static/catalogo/img/tornillosauto.jpg",
+    "activo": true
   },
   {
     "id": 12,
@@ -93,7 +104,8 @@
     "categoria": "Tornillería",
     "precio": 2990,
     "stock": 55,
-    "imagen": "/static/catalogo/img/tornillomad.jpg"
+    "imagen": "/static/catalogo/img/tornillomad.jpg",
+    "activo": true
   },
   {
     "id": 13,
@@ -101,7 +113,8 @@
     "categoria": "Tornillería",
     "precio": 1990,
     "stock": 70,
-    "imagen": "/static/catalogo/img/tuercahex.jpg"
+    "imagen": "/static/catalogo/img/tuercahex.jpg",
+    "activo": true
   },
   {
     "id": 14,
@@ -109,7 +122,8 @@
     "categoria": "Tornillería",
     "precio": 4490,
     "stock": 30,
-    "imagen": "/static/catalogo/img/pernogal.jpg"
+    "imagen": "/static/catalogo/img/pernogal.jpg",
+    "activo": true
   },
   {
     "id": 15,
@@ -117,7 +131,8 @@
     "categoria": "Tornillería",
     "precio": 1590,
     "stock": 45,
-    "imagen": "/static/catalogo/img/clavo2pul.jpg"
+    "imagen": "/static/catalogo/img/clavo2pul.jpg",
+    "activo": true
   },
   {
     "id": 16,
@@ -125,7 +140,8 @@
     "categoria": "Pintura",
     "precio": 12990,
     "stock": 18,
-    "imagen": "/static/catalogo/img/pinturalat.jpg"
+    "imagen": "/static/catalogo/img/pinturalat.jpg",
+    "activo": true
   },
   {
     "id": 17,
@@ -133,7 +149,8 @@
     "categoria": "Pintura",
     "precio": 5990,
     "stock": 22,
-    "imagen": "/static/catalogo/img/pinturaesmalteneg.jpg"
+    "imagen": "/static/catalogo/img/pinturaesmalteneg.jpg",
+    "activo": true
   },
   {
     "id": 18,
@@ -141,7 +158,8 @@
     "categoria": "Pintura",
     "precio": 2990,
     "stock": 33,
-    "imagen": "/static/catalogo/img/rodillopint.jpg"
+    "imagen": "/static/catalogo/img/rodillopint.jpg",
+    "activo": true
   },
   {
     "id": 19,
@@ -149,7 +167,8 @@
     "categoria": "Pintura",
     "precio": 1490,
     "stock": 50,
-    "imagen": "/static/catalogo/img/brocha2pul.jpg"
+    "imagen": "/static/catalogo/img/brocha2pul.jpg",
+    "activo": true
   },
   {
     "id": 20,
@@ -157,7 +176,8 @@
     "categoria": "Pintura",
     "precio": 2490,
     "stock": 27,
-    "imagen": "/static/catalogo/img/diluyente.jpg"
+    "imagen": "/static/catalogo/img/diluyente.jpg",
+    "activo": true
   },
   {
     "id": 21,
@@ -165,7 +185,8 @@
     "categoria": "Electricidad",
     "precio": 590,
     "stock": 200,
-    "imagen": "/static/catalogo/img/cableelec.jpg"
+    "imagen": "/static/catalogo/img/cableelec.jpg",
+    "activo": true
   },
   {
     "id": 22,
@@ -173,7 +194,8 @@
     "categoria": "Electricidad",
     "precio": 1990,
     "stock": 40,
-    "imagen": "/static/catalogo/img/enchufedob.jpg"
+    "imagen": "/static/catalogo/img/enchufedob.jpg",
+    "activo": true
   },
   {
     "id": 23,
@@ -181,7 +203,8 @@
     "categoria": "Electricidad",
     "precio": 1790,
     "stock": 38,
-    "imagen": "/static/catalogo/img/interruptorsim.jpg"
+    "imagen": "/static/catalogo/img/interruptorsim.jpg",
+    "activo": true
   },
   {
     "id": 24,
@@ -189,7 +212,8 @@
     "categoria": "Electricidad",
     "precio": 2490,
     "stock": 60,
-    "imagen": "/static/catalogo/img/ampolleta.jpg"
+    "imagen": "/static/catalogo/img/ampolleta.jpg",
+    "activo": true
   },
   {
     "id": 25,
@@ -197,7 +221,8 @@
     "categoria": "Electricidad",
     "precio": 890,
     "stock": 80,
-    "imagen": "/static/catalogo/img/cintaais.jpg"
+    "imagen": "/static/catalogo/img/cintaais.jpg",
+    "activo": true
   },
   {
     "id": 26,
@@ -205,7 +230,8 @@
     "categoria": "Plomería",
     "precio": 3990,
     "stock": 15,
-    "imagen": "/static/catalogo/img/llavepaso.jpg"
+    "imagen": "/static/catalogo/img/llavepaso.jpg",
+    "activo": true
   },
   {
     "id": 27,
@@ -213,7 +239,8 @@
     "categoria": "Plomería",
     "precio": 490,
     "stock": 100,
-    "imagen": "/static/catalogo/img/codopvc.jpg"
+    "imagen": "/static/catalogo/img/codopvc.jpg",
+    "activo": true
   },
   {
     "id": 28,
@@ -221,7 +248,8 @@
     "categoria": "Plomería",
     "precio": 3990,
     "stock": 25,
-    "imagen": "/static/catalogo/img/tubopvc.jpg"
+    "imagen": "/static/catalogo/img/tubopvc.jpg",
+    "activo": true
   },
   {
     "id": 29,
@@ -229,7 +257,8 @@
     "categoria": "Plomería",
     "precio": 690,
     "stock": 90,
-    "imagen": "/static/catalogo/img/cintatef.jpg"
+    "imagen": "/static/catalogo/img/cintatef.jpg",
+    "activo": true
   },
   {
     "id": 30,
@@ -237,7 +266,8 @@
     "categoria": "Plomería",
     "precio": 4990,
     "stock": 0,
-    "imagen": "/static/catalogo/img/sifonlava.jpg"
+    "imagen": "/static/catalogo/img/sifonlava.jpg",
+    "activo": true
   },
   {
     "id": 31,
@@ -245,7 +275,8 @@
     "categoria": "Jardín",
     "precio": 14990,
     "stock": 0,
-    "imagen": "/static/catalogo/img/manguera.jpg"
+    "imagen": "/static/catalogo/img/manguera.jpg",
+    "activo": true
   },
   {
     "id": 32,
@@ -253,7 +284,8 @@
     "categoria": "Jardín",
     "precio": 8990,
     "stock": 14,
-    "imagen": "/static/catalogo/img/palajardin.jpg"
+    "imagen": "/static/catalogo/img/palajardin.jpg",
+    "activo": true
   },
   {
     "id": 33,
@@ -261,7 +293,8 @@
     "categoria": "Jardín",
     "precio": 6990,
     "stock": 16,
-    "imagen": "/static/catalogo/img/tijerapod.jpg"
+    "imagen": "/static/catalogo/img/tijerapod.jpg",
+    "activo": true
   },
   {
     "id": 34,
@@ -269,7 +302,8 @@
     "categoria": "Jardín",
     "precio": 2990,
     "stock": 35,
-    "imagen": "/static/catalogo/img/guantes.jpg"
+    "imagen": "/static/catalogo/img/guantes.jpg",
+    "activo": true
   },
   {
     "id": 35,
@@ -277,7 +311,8 @@
     "categoria": "Seguridad",
     "precio": 6990,
     "stock": 20,
-    "imagen": "/static/catalogo/img/casco.jpg"
+    "imagen": "/static/catalogo/img/casco.jpg",
+    "activo": true
   },
   {
     "id": 36,
@@ -285,7 +320,8 @@
     "categoria": "Seguridad",
     "precio": 3990,
     "stock": 30,
-    "imagen": "/static/catalogo/img/guantecuero.jpg"
+    "imagen": "/static/catalogo/img/guantecuero.jpg",
+    "activo": true
   },
   {
     "id": 37,
@@ -293,7 +329,8 @@
     "categoria": "Seguridad",
     "precio": 2490,
     "stock": 40,
-    "imagen": "/static/catalogo/img/lentes.jpg"
+    "imagen": "/static/catalogo/img/lentes.jpg",
+    "activo": true
   },
   {
     "id": 38,
@@ -301,7 +338,8 @@
     "categoria": "Adhesivos",
     "precio": 3490,
     "stock": 25,
-    "imagen": "/static/catalogo/img/pegamento.jpg"
+    "imagen": "/static/catalogo/img/pegamento.jpg",
+    "activo": true
   },
   {
     "id": 39,
@@ -309,7 +347,8 @@
     "categoria": "Adhesivos",
     "precio": 2990,
     "stock": 28,
-    "imagen": "/static/catalogo/img/silicona.jpg"
+    "imagen": "/static/catalogo/img/silicona.jpg",
+    "activo": true
   },
   {
     "id": 40,
@@ -317,6 +356,7 @@
     "categoria": "Medición",
     "precio": 3490,
     "stock": 22,
-    "imagen": "/static/catalogo/img/huincha.jpg"
+    "imagen": "/static/catalogo/img/huincha.jpg",
+    "activo": true
   }
 ]

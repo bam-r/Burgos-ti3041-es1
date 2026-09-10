@@ -3,6 +3,12 @@
 {% block titulo %}Catálogo de productos{% endblock %}
 
 {% block contenido %}
+    <div class="barra-usuario">
+        <span>Conectado como <strong>{{ usuario.nombre }}</strong>
+            {% if usuario.rol == 'admin' %}(administrador){% endif %}</span>
+        <a href="{% url 'logout' %}">Cerrar sesión</a>
+    </div>
+
     <h2>Nuestros productos</h2>
 
     <section class="resumen">
@@ -26,13 +32,16 @@
                 </thead>
                 <tbody>
                     {% for producto in productos %}
-                    <tr class="{% if producto.stock == 0 %}sin-stock{% endif %}">
+                    <tr class="{% if producto.stock == 0 %}sin-stock{% endif %} {% if not producto.activo %}retirado{% endif %}">
                         <td>
                             <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}"
                                  class="miniatura"
                                  onerror="this.src='/static/catalogo/img/sin-imagen.jpg'">
                         </td>
-                        <td><a href="{% url 'detalle' producto.id %}">{{ producto.nombre }}</a></td>
+                        <td>
+                            <a href="{% url 'detalle' producto.id %}">{{ producto.nombre }}</a>
+                            {% if not producto.activo %}<br><span class="etiqueta-retirado">Retirado</span>{% endif %}
+                        </td>
                         <td>{{ producto.categoria }}</td>
                         <td>${{ producto.precio }}</td>
                         <td>
@@ -42,14 +51,38 @@
                                 {{ producto.stock }}
                             {% endif %}
                         </td>
-                        <td>
-                            {% if producto.stock > 0 %}
+                        <td class="celda-acciones">
+                            {% if producto.activo and producto.stock > 0 %}
                                 <form method="post" action="{% url 'comprar' producto.id %}">
                                     {% csrf_token %}
                                     <button type="submit" class="btn-comprar">Comprar</button>
                                 </form>
                             {% else %}
-                                <button class="btn-comprar" disabled>Agotado</button>
+                                <button class="btn-comprar" disabled>
+                                    {% if not producto.activo %}Retirado{% else %}Agotado{% endif %}
+                                </button>
+                            {% endif %}
+
+                            {% if usuario.rol == 'admin' %}
+                                <div class="acciones-admin">
+                                    {% if producto.activo %}
+                                        <form method="post" action="{% url 'retirar' producto.id %}">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn-admin btn-retirar">Retirar</button>
+                                        </form>
+                                    {% else %}
+                                        <form method="post" action="{% url 'reactivar' producto.id %}">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn-admin btn-reactivar">Reactivar</button>
+                                        </form>
+                                    {% endif %}
+
+                                    <form method="post" action="{% url 'agregar_stock' producto.id %}" class="form-stock">
+                                        {% csrf_token %}
+                                        <input type="number" name="cantidad" min="1" value="5" class="input-stock">
+                                        <button type="submit" class="btn-admin btn-stock">+ Stock</button>
+                                    </form>
+                                </div>
                             {% endif %}
                         </td>
                     </tr>
